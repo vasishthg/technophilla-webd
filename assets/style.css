@@ -11,7 +11,7 @@ body {
     src: local('FORCED SQUARE'), url('https://fonts.cdnfonts.com/s/46131/FORCED SQUARE.woff') format('woff');
   font-weight:300;
   font-size:32px;
-  padding-top:40vh;
+
   height:100vh;
   overflow:hidden;
   -webkit-backface-visibility: hidden;
@@ -65,5 +65,4 @@ div:last-of-type span {
 p {
   font-size:12px;
   color:#999;
-  margin-top:200px;
 }
