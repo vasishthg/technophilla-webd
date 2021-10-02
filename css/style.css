@@ -9,7 +9,7 @@ body {
   font-family: 'FORCED SQUARE';
     font-style: normal;
     font-weight: 500;
-    src: url(/FORCED\ SQUARE.ttf) format(ttf);
+    src: url(/mainfont.ttf) format(ttf);
   font-weight:500;
   font-size:6em;
   padding-top:40vh;
