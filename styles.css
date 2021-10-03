@@ -302,21 +302,25 @@ animation-fill-mode: forwards;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 1px;
+  width: 6.9px;
+  border-radius: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #181b2794;
+  
+  border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #25293891;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #252938af;
+  border-radius: 10px;
 }
