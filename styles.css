@@ -7,6 +7,16 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Josefin Sans', sans-serif;
+  
+}
+img{
+  
+ -webkit-user-drag: none;
+ user-select: none;
+ -moz-user-select: none;
+ -webkit-user-drag: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
 }
 
 body{
@@ -118,7 +128,7 @@ li:hover{
 }
 
 .wrapper .main_content .header{
-  padding: 20px;
+  padding: 25px;
   background: #0B0C10;
   color: #717171;
   border-bottom: 1px solid #1F2833;
