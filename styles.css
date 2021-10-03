@@ -34,7 +34,6 @@ body {
   font-size: 1em;
 
   height:100vh;
-  overflow:hidden;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
@@ -74,12 +73,14 @@ body {
 
 
 @keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
+  
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  70%{opacity: 1;}
+  100%{opacity: 0;}
 }
 @media screen and (min-width: 1050px) {
+  
   @keyframes rotate{
 
       from {
@@ -88,13 +89,19 @@ body {
       to {
         transform:translate(-150%, -50%)   rotate(359deg);
       }
+      
+      0%{opacity: 0;}
+      50%{opacity: 1;}
+      60%{opacity: 1;}
+      100%{opacity: 0;}
 
   }
 @keyframes slidein {
     0% { margin-left:-2em; opacity: 0  }
     20% { margin-left:-5em; opacity: 0.25 ;}
     35% { margin-left:2.5em; opacity: 0.5;}
-    100% { margin-left:2em;opacity: 1;}
+    50% { margin-left:2.35em;opacity: 1;}
+    100%{ margin-left: 2.5em; opacity: 0;}
 
 }
 
@@ -108,12 +115,13 @@ body {
       to {
         transform:  translate(-50%, -50%) rotate(359deg);
       }
-
   }
 @keyframes slidein {
-    0% {  opacity: 0  }
-
-    100% {opacity: 0}
+  
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  70%{opacity: 1;}
+  100%{opacity: 0;}
 
 }
 }
@@ -123,6 +131,7 @@ body {
     30% {width:355px;}
     80% {opacity:1;}
     100% {opacity:0;width:355px;}
+    
 }
 
 li:hover{
@@ -140,6 +149,8 @@ li:hover{
   padding: 30px 0px;
   position: fixed;
   border-radius: 6.9px;
+  position: fixed;
+  top: 0%;
 }
 
 .wrapper .sidebar h2{
@@ -288,4 +299,24 @@ animation-fill-mode: forwards;
   60%{width: 120px;}
   100%{width: 120px;}
 
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
