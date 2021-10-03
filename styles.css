@@ -11,8 +11,11 @@
 
 body{
    background-color: #0B0C10;
+   
 }
-
+li:hover{
+  color: #66fcf1;
+}
 .wrapper{
   display: flex;
   position: relative;
@@ -91,12 +94,21 @@ body{
 
   border-radius: 25px;
 }
+.bhendi:hover{
+  color:#66fcf1;
+}
 .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
   color: white;
 }
 .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+#bhendi{
+  color:#C4C4C4;
+}
+#bhendi:hover{
+  color:#66fcf1
 }
 
 
