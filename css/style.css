@@ -36,6 +36,7 @@ div:last-of-type {
 
 div:last-of-type span {
   margin-left:-355px;
+  
   animation: slidein 7s infinite;
 }
 @keyframes rotate{
