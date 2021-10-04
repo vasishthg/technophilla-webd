@@ -51,45 +51,20 @@
               </div>
 
     </div>
+    <style>
+      textarea{
+        background: none;
+      }
+    </style>
 
     <div class="main_content">
 
         <div class="header" style="font-size: 1.5em;"><br><h3 style="width: fit-content;padding-left: 2em;font-weight: 500;color: #C5C6C7;font-size: 1.4em;">About</h3></div>
-        
-        <div class="info">
-          <textarea id="textExample" rows="5" cols="60">Here is some info about us:
-            Long time the manxome foe he sought—
-            So rested he by the Tumtum tree,
-            And stood awhile in thought.
-              </textarea>
-            
-              <button onclick="animateText(textExample)">Run the animated typing!</button>
-            
-              <script>
-                function animateText(textArea) {
-                  let text = textArea.value;
-                  let to = text.length,
-                    from = 0;
-            
-                  animate({
-                    duration: 5000,
-                    timing: bounce,
-                    draw: function(progress) {
-                      let result = (to - from) * progress + from;
-                      textArea.value = text.substr(0, Math.ceil(result))
-                    }
-                  });
-                }
-            
-            
-                function bounce(timeFraction) {
-                  for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
-                    if (timeFraction >= (7 - 4 * a) / 11) {
-                      return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
-                    }
-                  }
-                }
-              </script>
+        <h4> <br> <br> <br>
+        Aspect games is the best destination for pc, ps and xbox games<BR>
+        We are a team of gamers with a vision, to give everyone cheaper and more affordable games to play
+        <br><br><br><br><br>I mean fun is mandatory
+        </h6>
 
     </div>
 
