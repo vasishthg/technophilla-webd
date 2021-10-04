@@ -53,12 +53,19 @@
     </div>
 
     <div class="main_content">
+        <div id="slider">
+            <ul>
+              <li><img src="/images/fifa.jpg"></li>
+              <li><img src="/images/ps.jpg"></li>
+              <li><img src="/images/bruh.jpg"></li>
+            </ul>  
+          </div>
+           
+          
 
-        <div class="header" style="font-size: 1.5em;"><br>Discover</div>
         <div class="info">
-   <center> <div class="hero"><img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 38.png" style="max-width: 86%; display: flex; justify-content: center; align-items: center; "></center>
         <BR><BR><BR>
-           <center>     <div><img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 39.png" style="max-width: 15%;">&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 40.png" style="max-width: 15%;">&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 39.png" style="max-width: 15%;">&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 39.png" style="max-width: 15%;">&ThickSpace;</div> </center>
+           <center>     <div><img src="/images/bruhmomento.png" style="max-width: 15%;">&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 40.png" style="max-width: 15%;">&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 39.png" style="max-width: 15%;">&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<img src="https://vasishthg.github.io/technophilla-webd/images/Rectangle 39.png" style="max-width: 15%;">&ThickSpace;</div> </center>
 
 
     </div>
@@ -75,6 +82,53 @@ $(window).on('load', function() {
     setInterval(function(){ $(".preloader").hide();     $(".wrapper")[0].style.display = ""}, 6500);
 
 });
+jQuery(document).ready(function ($) {
+
+$(function(){
+  setInterval(function () {
+      moveRight();
+  }, 3000);
+});
+
+  var slideCount = $('#slider ul li').length;
+  var slideWidth = $('#slider ul li').width();
+  var slideHeight = $('#slider ul li').height();
+  var sliderUlWidth = slideCount * slideWidth;
+  
+  $('#slider').css({ width: slideWidth, height: slideHeight });
+  
+  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  
+  $('#slider ul li:last-child').prependTo('#slider ul');
+
+  function moveLeft() {
+      $('#slider ul').animate({
+          left: + slideWidth
+      }, 200, function () {
+          $('#slider ul li:last-child').prependTo('#slider ul');
+          $('#slider ul').css('left', '');
+      });
+  };
+
+  function moveRight() {
+      $('#slider ul').animate({
+          left: - slideWidth
+      }, 200, function () {
+          $('#slider ul li:first-child').appendTo('#slider ul');
+          $('#slider ul').css('left', '');
+      });
+  };
+
+  $('a.control_prev').click(function () {
+      moveLeft();
+  });
+
+  $('a.control_next').click(function () {
+      moveRight();
+  });
+
+});    
+
 
 </script>
 </body>
