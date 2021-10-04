@@ -154,14 +154,12 @@ li:hover{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #0B0C10;
-  padding: 20px 0px;
+  padding: 15px 0px;
   position: fixed;
   border-radius: 6.9px;
   position: fixed;
   top: 0%;
   border: none;
-  border-right: 2px solid #1F2833;
 }
 
 .wrapper .sidebar h2{
@@ -174,7 +172,7 @@ li:hover{
 .wrapper .sidebar ul li{
   padding: 12px;
   margin-bottom: 0.5em;
-  width: 11em;
+  width: 12em;
   margin-left: 0.5em;
 
 }
