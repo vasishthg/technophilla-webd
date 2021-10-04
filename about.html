@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aspect | Home</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <meta property="og:title" content="Aspect Games Store">
+    <meta property="og:description" content="Aspect Games store provides games for pc, ps and xbox. See the website for latest info">
+    <meta property="og:image" content="https://vasishthg.github.io/technophilla-webd/main-icon.png">
+    <meta property="og:url" content="https://vasishthg.github.io/technophilla-webd/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://vasishthg.github.io/technophilla-webd/main-icon.png" type="image/x-icon"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+  <link rel="preload" href="FoughtKnight.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="https://js.cx/libs/animate.js"></script>
+  <link rel="preload" href="https://vasishthg.github.io/technophilla-webd/FoughtKnight.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <audio controls autoplay hidden loop>
+    <source src="https://vasishthg.github.io/technophilla-webd/music.mp3" type="audio/mpeg">
+  </audio>
+  <div class="preloader">
+      <img src="https://vasishthg.github.io/technophilla-webd/main-icon.png" class="preloaderimg" style="max-width: 30%;">
+
+
+
+  <div class="name">
+    <span>Aspect</span>
+  </div>
+  </div>
+<div class="wrapper">
+    <div class="sidebar">
+
+        <h2><a href=""><img src="https://vasishthg.github.io/technophilla-webd/main-icon.png" style="max-width: 30%;"></a></h2>
+        <ul>
+            <li style="border-radius:25px;" ><a href="#"><i class="fas fa-home fa-lg" style="left:1.5em; "></i><p class="navitem">Home</p></a></li>
+            <li style="border-radius:25px;  background-color: #1F2833;" class="hvr-sweep-to-right" ><a href="https://vasishthg.github.io/technophilla-webd/about.html" class="bhendi"  style="color: #66FCF1;"><i class="fas fa-user-friends fa-lg" style="color: #66FCF1;"></i><p class="navitem">  About</p></a></li>
+            <li style="border-radius:25px;" class="hvr-sweep-to-right"><a href="https://vasishthg.github.io/technophilla-webd/playstation" class="bhendi"><i class="fab fa-playstation fa-lg" style="font-size: 1.5em;left: 0.8em;"></i><p class="navitem" style="padding-left: 2.2em;">  Playstation</p></a></li>
+            <li style="border-radius:25px;" class="hvr-sweep-to-right"><a href="https://vasishthg.github.io/technophilla-webd/about.html" class="bhendi"><i class="fab fa-xbox fa-lg" style="font-size: 1.5em;left: 0.9em;"></i><p class="navitem" style="    padding-left: 1.5em;">  Xbox</p></a></li>
+            <div style="border-left:1px solid #000;height:500px"></div>
+
+            <div class="search-box" >
+                <a class="search-butt" href="#"><i class="fas fa-search"></i></a>
+                  <input class="search-text" type="text" name="search" placeholder="">
+
+              </div>
+
+    </div>
+
+    <div class="main_content">
+
+        <div class="header" style="font-size: 1.5em;"><br><h3 style="width: fit-content;padding-left: 2em;font-weight: 500;color: #C5C6C7;font-size: 1.4em;">About</h3></div>
+        
+        <div class="info">
+          <textarea id="textExample" rows="5" cols="60">Here is some info about us:
+            Long time the manxome foe he sought—
+            So rested he by the Tumtum tree,
+            And stood awhile in thought.
+              </textarea>
+            
+              <button onclick="animateText(textExample)">Run the animated typing!</button>
+            
+              <script>
+                function animateText(textArea) {
+                  let text = textArea.value;
+                  let to = text.length,
+                    from = 0;
+            
+                  animate({
+                    duration: 5000,
+                    timing: bounce,
+                    draw: function(progress) {
+                      let result = (to - from) * progress + from;
+                      textArea.value = text.substr(0, Math.ceil(result))
+                    }
+                  });
+                }
+            
+            
+                function bounce(timeFraction) {
+                  for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+                    if (timeFraction >= (7 - 4 * a) / 11) {
+                      return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                    }
+                  }
+                }
+              </script>
+
+    </div>
+
+
+      </div>
+
+    </div>
+</div>
+<script>
+$(window).on('load', function() {
+  console.log($(".wrapper")[0].style.display = "none")
+    $(".wrapper")[0].style.display = "none"
+    setInterval(function(){ $(".preloader").hide();     $(".wrapper")[0].style.display = ""}, 6500);
+
+});
+
+</script>
+</body>
+</html>
