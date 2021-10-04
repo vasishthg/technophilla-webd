@@ -154,6 +154,7 @@ li:hover{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
+  background: #0B0C10;
   padding: 15px 0px;
   position: fixed;
   border-radius: 6.9px;
