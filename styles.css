@@ -49,16 +49,12 @@ body {
 
 }
 
-.navitem{
-  font-size: 1.2em;
-  padding-left: 2em;
-  padding-top: 0.17em;
-}
+
 .name {
   position: absolute;
 
   font-size: 10em;
-  top: 43%;
+  top: 40%;
   width:0px;
 
   animation: reveal 7s infinite;
@@ -77,14 +73,14 @@ body {
 
 
 @keyframes showup {
-
+  
   0%{opacity: 0;}
   50%{opacity: 1;}
   70%{opacity: 1;}
   100%{opacity: 0;}
 }
 @media screen and (min-width: 1050px) {
-
+  
   @keyframes rotate{
 
       from {
@@ -93,7 +89,7 @@ body {
       to {
         transform:translate(-150%, -50%)   rotate(359deg);
       }
-
+      
       0%{opacity: 0;}
       50%{opacity: 1;}
       60%{opacity: 1;}
@@ -121,12 +117,15 @@ body {
       }
   }
 @keyframes slidein {
-
+  
   0%{opacity: 0;}
   50%{opacity: 1;}
   70%{opacity: 1;}
   100%{opacity: 0;}
 
+}
+.name span{
+  display:none;
 }
 }
 @keyframes reveal {
@@ -135,7 +134,7 @@ body {
     30% {width:355px;}
     80% {opacity:1;}
     100% {opacity:0;width:355px;}
-
+    
 }
 
 li:hover{
@@ -150,40 +149,34 @@ li:hover{
   width: 200px;
   height: 100%;
   background: #0B0C10;
-  padding: 20px 0px;
+  padding: 30px 0px;
   position: fixed;
   border-radius: 6.9px;
   position: fixed;
   top: 0%;
-  border: none;
-  border-right: 2px solid #1F2833;
 }
 
 .wrapper .sidebar h2{
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .wrapper .sidebar ul li{
-  padding: 12px;
-  margin-bottom: 0.5em;
-  width: 11em;
-  margin-left: 0.5em;
-
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .wrapper .sidebar ul li a{
   color: #bdb8d7;
-  width: 100px;
   display: block;
 }
 
-.wrapper .sidebar ul li a .fas,.wrapper .sidebar ul li a .fab{
-  /* width: 50px; */
-  position: absolute;
-  left: 1em;
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
 }
 
 .wrapper .sidebar ul li:hover{
@@ -197,8 +190,9 @@ li:hover{
 .hvr-sweep-to-right {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
-
+  transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -251,11 +245,9 @@ li:hover{
 
 .wrapper .main_content .header{
   padding: 25px;
-  padding-top: 40px;
-  padding-bottom: 0px;
   background: #0B0C10;
   color: #717171;
-  /* border-bottom: 1px solid #1F2833; */
+  border-bottom: 1px solid #1F2833;
 }
 
 .wrapper .main_content .info{
@@ -320,9 +312,10 @@ animation-fill-mode: forwards;
 /* Track */
 ::-webkit-scrollbar-track {
   background: #181b2794;
-
+  
   border-radius: 10px;
 }
+
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -363,7 +356,7 @@ animation-fill-mode: forwards;
   background: #ccc;
   text-align: center;
   line-height: 300px;
-
+  
 }
 
 a.control_prev, a.control_next {
