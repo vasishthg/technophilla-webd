@@ -60,6 +60,8 @@ body {
   font-size: 10em;
   top: 43%;
   width:0px;
+  
+  font-family: 'FoughtKnight';
 
   animation: reveal 7s infinite;
 }
@@ -73,6 +75,9 @@ body {
   /* transform: translate(250%,400%); */
   /* margin-left:-355px; */
   animation: slidein 7s infinite;
+  
+  font-family: 'FoughtKnight';
+
 }
 
 
